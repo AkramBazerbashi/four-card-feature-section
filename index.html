@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins">
   
   <title>Frontend Mentor | Four card feature section</title>
 
@@ -12,28 +13,147 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    * {
+      font-size: 15px;
+      font-family: Poppins;
+    }
+    body{background-color: rgb(218, 216, 216);}
+    .par {margin: 20px auto 50px;}
+    .par p:first-child {
+      color: hsl(234, 12%, 34%);
+      font-weight: 200;
+      font-size: 22px;
+      text-align: center;
+    }
+    .par p:nth-child(2  ) {
+      color: hsl(234, 12%, 34%);
+      font-size: 22px;
+      font-weight: 600;
+      text-align: center;
+      margin-top: -10px;
+    }
+    .par p:last-child {
+      color: hsl(229, 6%, 66%);
+      text-align: center;
+      width: 33%;
+      margin: auto;
+    }
+
+    .container{
+      width: 80%;
+      margin: 50px auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 25px 25px;
+      
+    }
+    .container div{
+      background-color: hsl(0, 0%, 98%);
+      border-radius: 5px;
+      padding: 30px;
+      box-shadow: 0px 7px 10px 0 hsl(229, 6%, 66%);
+    }
+    .container div p:first-child {
+      font-weight: 400;
+      font-size: 18px;
+      margin-top: 0px;
+      color: hsl(234, 12%, 34%);
+    }
+    .container div p:last-child {
+      color: hsl(229, 6%, 66%);
+    }
+    .container div img {
+    margin-left: 75%;
+    }
+    .top{
+      grid-column: 2 / 3;
+      grid-row: 1 /2;
+      border-top: 4px solid hsl(0, 78%, 62%);
+    }
+    .right{
+      grid-column: 3 span(1);
+      grid-row: 1 /2;
+      border-top: 4px solid hsl(180, 62%, 55%);
+      margin-bottom: -140px;
+      margin-top: 140px;
+    }
+    .bottom{
+      grid-column: 2 / 3;
+      grid-row: 2 span(1);
+      border-top: 4px solid hsl(34, 97%, 64%);
+    }
+    .left{
+      grid-column: 1 /2;
+      grid-row: 1 /2;
+      border-top: 4px solid hsl(212, 86%, 64%);
+      margin-bottom: -140px;
+      margin-top: 140px;
+    }
+    @media (max-width: 375px) {
+      .par p:last-child {
+        width: 100%;
+      }
+      .container{
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+      }
+      .left{
+        grid-column: 1 ;
+        grid-row: 1 /2;
+        border-top: 4px solid hsl(212, 86%, 64%);
+        margin-bottom: initial;
+        margin-top: initial;
+      }
+      .top{
+        grid-column: 1;
+        grid-row: 2 /3;
+      }
+      .bottom{
+        grid-column: 1;
+        grid-row: 3 / 4;
+      }
+      .right{
+        grid-column: 1;
+        grid-row: 4 ;
+        margin-bottom: initial;
+        margin-top: initial;
+      }
+    }
   </style>
 </head>
 <body>
   
-  Reliable, efficient delivery
-  Powered by Technology
-
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
-
-  Supervisor
-  Monitors activity to identify project roadblocks
-
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
+  <div class="par">
+    <p>Reliable, efficient delivery</p>
+    <p>Powered by Technology</p>
+    <p>Our Artificial Intelligence powered tools use millions of project data points 
+      to ensure that your project is successful</p>
+  </div>
+  <div class="container">
+    <div class="top">
+      <p>Team Builder</p>
+      <p>Scans our talent network to create the optimal team for your project</p>
+      <img src="images/icon-team-builder.svg">
+    </div>
+    <div class="right">
+      <p>Calculator</p>
+      <p>Uses data from past projects to provide better delivery estimates</p>
+      <img src="images/icon-calculator.svg">
+    </div>
+    <div class="bottom">
+      <p>Karma</p>
+      <p>Regularly evaluates our talent to ensure quality</p>
+      <img src="images/icon-karma.svg">
+    </div>
+    <div class="left">
+      <p>Supervisor</p>
+      <p>Monitors activity to identify project roadblocks</p>
+      <img src="images/icon-supervisor.svg">
+    </div>
+  </div>
   
   <footer>
     <p class="attribution">
